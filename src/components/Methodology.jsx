@@ -68,7 +68,7 @@ export default function Methodology() {
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(13,13,18,0.92)', pointerEvents: 'none' }} />
 
       <div className="container-wide" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left */}
           <div className="meth-title">
             <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.18em', color: 'var(--champagne)', marginBottom: '0.75rem' }}>

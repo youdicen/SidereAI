@@ -110,8 +110,7 @@ function ProjectCard({ project, index }) {
   return (
     <div
       ref={cardRef}
-      className="portfolio-card"
-      style={{ gridColumn: isLarge ? 'span 2' : 'span 1' }}
+      className={`portfolio-card ${isLarge ? 'md:col-span-2' : ''}`}
     >
       {/* Image */}
       <div style={{ overflow: 'hidden', borderRadius: '1.5rem 1.5rem 0 0', position: 'relative' }}>

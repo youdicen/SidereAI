@@ -1,22 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ExternalLink, Globe, QrCode, ScanLine, Building2, Cake, Coffee, Monitor } from 'lucide-react'
+import { ExternalLink, Globe, QrCode, ScanLine, Building2, Cake, Coffee, Monitor, PenLine } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
-  {
-    id: 'guanaco',
-    title: 'Portal Guanaco',
-    subtitle: 'Plataforma de denuncia ciudadana',
-    description: 'Sistema digital para que ciudadanos reporten problemas telefónicos y de telecomunicaciones. Interfaz intuitiva con seguimiento en tiempo real y base de datos centralizada.',
-    url: 'https://youdicen.github.io/PortalGuanaco/',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80',
-    icon: Globe,
-    tags: ['Cívico', 'React', 'Supabase'],
-    color: '#BD0012',
-  },
   {
     id: 'openqr',
     title: 'OpenQR',
@@ -29,6 +18,17 @@ const projects = [
     color: '#C9A84C',
   },
   {
+    id: 'opensignature',
+    title: 'OpenSignature',
+    subtitle: 'Terminal de firma digital offline',
+    description: 'Sistema de alta precisión diseñado bajo principios de confianza digital. Captura de firmas biométricas y fotografías en un entorno completamente aislado y seguro.',
+    url: 'https://youdicen.github.io/OpenSignature/',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80',
+    icon: PenLine,
+    tags: ['Offline', 'React', 'Seguridad'],
+    color: '#32CD32',
+  },
+  {
     id: 'openocr',
     title: 'OpenOCR',
     subtitle: 'Reconocimiento óptico de caracteres',
@@ -38,6 +38,17 @@ const projects = [
     icon: ScanLine,
     tags: ['IA', 'Tesseract.js', 'Mobile'],
     color: '#7C3AED',
+  },
+  {
+    id: 'guanaco',
+    title: 'Portal Guanaco',
+    subtitle: 'Plataforma de denuncia ciudadana',
+    description: 'Sistema digital para que ciudadanos reporten problemas telefónicos y de telecomunicaciones. Interfaz intuitiva con seguimiento en tiempo real y base de datos centralizada.',
+    url: 'https://youdicen.github.io/PortalGuanaco/',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80',
+    icon: Globe,
+    tags: ['Cívico', 'React', 'Supabase'],
+    color: '#BD0012',
   },
   {
     id: 'hotelpalma',

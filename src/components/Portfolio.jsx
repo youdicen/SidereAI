@@ -230,7 +230,7 @@ export default function Portfolio() {
               <span className="serif-italic" style={{ color: 'var(--champagne)' }}>funcionan</span>
             </h2>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.95rem', color: 'rgba(250,248,245,0.5)', marginTop: '0.75rem', maxWidth: '420px', lineHeight: 1.7, fontWeight: 300 }}>
-              Proyectos reales, para clientes reales. Cada solución construida desde cero con tecnología de vanguardia.
+              Software real, para clientes reales. Cada solución construida con tecnología de vanguardia.
             </p>
           </div>
           <a

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Shield, Zap, Lock } from 'lucide-react'
+import { Shield, Zap, Lock, Target, Smartphone, Layout } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,6 +32,33 @@ const features = [
     description: 'Nuestros modelos propietarios producen resultados deterministas, no alucinaciones. Data soberana: tu información nunca entrena modelos públicos de terceros.',
     metric: '2x',
     metricLabel: 'Eficiencia operativa',
+  },
+  {
+    icon: Target,
+    tag: 'Estrategia',
+    title: 'Desarrollo Estratégico Ágil',
+    italic: 'lógica antes que código',
+    description: 'Generamos herramientas personalizadas en tiempo récord porque primero comprendemos a fondo la lógica operativa de tu negocio. Diseñamos la solución exacta antes de escribir la primera línea de código.',
+    metric: '100%',
+    metricLabel: 'Personalización',
+  },
+  {
+    icon: Smartphone,
+    tag: 'Accesibilidad',
+    title: 'Enfoque Mobile-First',
+    italic: 'experiencia óptima',
+    description: 'Todas nuestras plataformas se desarrollan pensando nativamente en un entorno móvil. Aseguramos una interacción inmediata, fluida y sin fricciones desde la palma de tu mano, en cualquier dispositivo.',
+    metric: 'UI/UX',
+    metricLabel: 'Nativo sin compromisos',
+  },
+  {
+    icon: Layout,
+    tag: 'Estética',
+    title: 'Diseño Moderno e Intuitivo',
+    italic: 'alta fidelidad',
+    description: 'Construimos interfaces impecables de alta fidelidad que operan como verdaderos instrumentos digitales. Combinamos la estética premium con una usabilidad instintiva para elevar la percepción de tu marca.',
+    metric: '1:1',
+    metricLabel: 'Pixel perfect',
   },
 ]
 

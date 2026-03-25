@@ -105,7 +105,7 @@ export default function Hero() {
             color: 'rgba(250,248,245,0.55)',
             marginTop: '0.5rem',
           }}>
-            Soluciones de IA aplicada.
+            Soluciones de IA/BI aplicada.
           </div>
         </h1>
 
@@ -122,7 +122,7 @@ export default function Hero() {
             fontWeight: 300,
           }}
         >
-          Diseñamos y desplegamos sistemas de inteligencia artificial propietarios para empresas que no pueden permitirse depender de terceros. Del audit al deploy, somos su equipo de ingeniería.
+          Diseñamos y desplegamos sistemas propietarios para empresas que no pueden permitirse depender de terceros. Del audit al deploy, somos su equipo de ingeniería.
         </p>
 
         {/* CTAs */}

@@ -23,10 +23,11 @@ export default function Hero() {
     <section
       style={{
         position: 'relative',
-        height: '100dvh',
+        minHeight: '100dvh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
+        paddingBottom: '4rem',
       }}
     >
       {/* Background Image */}
@@ -60,7 +61,7 @@ export default function Hero() {
       }} />
 
       {/* Content */}
-      <div className="container-wide" style={{ position: 'relative', zIndex: 10, paddingTop: '5rem' }}>
+      <div className="container-wide" style={{ position: 'relative', zIndex: 10, paddingTop: '5rem', paddingBottom: '2rem' }}>
         {/* Badge */}
         <div ref={badgeRef} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
           <span className="status-dot" />
@@ -121,7 +122,7 @@ export default function Hero() {
             fontWeight: 300,
           }}
         >
-          Diseñamos y desplegamos sistemas de inteligencia artificial propietarios para empresas que no pueden permitirse depender de terceros. Del audit al deploy, somos su equipo de ingeniería neural.
+          Diseñamos y desplegamos sistemas de inteligencia artificial propietarios para empresas que no pueden permitirse depender de terceros. Del audit al deploy, somos su equipo de ingeniería.
         </p>
 
         {/* CTAs */}
@@ -157,8 +158,8 @@ export default function Hero() {
         >
           {[
             { n: '99.9%', label: 'Confiabilidad del Modelo' },
-            { n: '30%', label: 'Reducción de Latencia' },
-            { n: '5+', label: 'Proyectos Desplegados' },
+            { n: '60%', label: 'Reducción de Latencia' },
+            { n: '8+', label: 'Proyectos Desplegados' },
           ].map(stat => (
             <div key={stat.n}>
               <div className="stat-number">{stat.n}</div>
@@ -174,8 +175,7 @@ export default function Hero() {
       <div style={{
         position: 'absolute',
         bottom: '2.5rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        right: 'clamp(1.5rem, 5vw, 4rem)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

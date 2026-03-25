@@ -223,7 +223,7 @@ export default function Portfolio() {
         <div style={{ marginBottom: '3.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'flex-end', justifyContent: 'space-between' }}>
           <div>
             <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.18em', color: 'var(--champagne)', marginBottom: '0.75rem' }}>
-              — PORTAFOLIO DE PROYECTOS
+              — PORTAFOLIO DE PROYECTOS (DEMOS)
             </div>
             <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.04em', color: 'var(--ivory)', lineHeight: 1.1 }}>
               Soluciones que{' '}

@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Servicios', href: '#servicios' },
+  { label: 'Mercados', href: '#mercados' },
   { label: 'Portafolio', href: '#portafolio' },
-  { label: 'Metodología', href: '#metodologia' },
+  { label: 'Protocolo', href: '#metodologia' },
+  { label: 'Comunidad', href: '#comunidad' },
   { label: 'Insights', href: '#insights' },
 ]
 
@@ -47,12 +48,12 @@ export default function Header() {
           </a>
         ))}
         <a
-          href="#contacto"
+          href="mailto:solutions@sidereai.com"
           onClick={() => setMenuOpen(false)}
           className="btn-magnetic btn-primary"
         >
           <span className="btn-slide" />
-          <span className="btn-text">Contacto</span>
+          <span className="btn-text">Propuesta Técnica</span>
         </a>
       </div>
 
@@ -100,7 +101,7 @@ export default function Header() {
                 Sidere<span style={{ color: 'var(--champagne)' }}>AI</span>
               </div>
               <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.55rem', letterSpacing: '0.14em', color: 'rgba(250,248,245,0.45)' }}>
-                INGENIERÍA NEURAL
+                INGENIERÍA ENTERPRISE
               </div>
             </div>
           </a>
@@ -132,13 +133,11 @@ export default function Header() {
           {/* CTA */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/50362200921"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:solutions@sidereai.com"
               className="btn-magnetic btn-primary hidden md:inline-flex"
             >
               <span className="btn-slide" />
-              <span className="btn-text">WhatsApp</span>
+              <span className="btn-text">Propuesta Técnica</span>
             </a>
             <button
               onClick={() => setMenuOpen(true)}

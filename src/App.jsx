@@ -1,8 +1,11 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Markets from './components/Markets'
 import Features from './components/Features'
 import Portfolio from './components/Portfolio'
 import Methodology from './components/Methodology'
+import Compliance from './components/Compliance'
+import Community from './components/Community'
 import Insights from './components/Insights'
 import Footer from './components/Footer'
 import { MessageCircle } from 'lucide-react'
@@ -13,9 +16,12 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Markets />
         <Features />
         <Portfolio />
         <Methodology />
+        <Compliance />
+        <Community />
         <Insights />
       </main>
       <Footer />

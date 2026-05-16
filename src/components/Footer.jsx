@@ -1,4 +1,4 @@
-import { MessageCircle, Linkedin, Mail, Phone } from 'lucide-react'
+import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -13,7 +13,7 @@ export default function Footer() {
         overflow: 'hidden',
       }}
     >
-      {/* Top rounded corners visual */}
+      {/* Gradient top line */}
       <div style={{
         position: 'absolute',
         top: 0, left: 0, right: 0,
@@ -31,32 +31,42 @@ export default function Footer() {
       >
         <div className="container-wide" style={{ maxWidth: 720 }}>
           <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.18em', color: 'var(--champagne)', marginBottom: '1rem' }}>
-            — INICIEMOS UNA CONVERSACIÓN
+            — TRABAJEMOS JUNTOS
           </div>
           <h2 style={{
             fontFamily: 'Inter, sans-serif', fontWeight: 700,
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             letterSpacing: '-0.04em', color: 'var(--ivory)', lineHeight: 1.05, marginBottom: '1.25rem',
           }}>
-            ¿Listo para construir algo{' '}
-            <span className="serif-italic" style={{ color: 'var(--champagne)' }}>extraordinario</span>?
+            ¿Evaluando{' '}
+            <span className="serif-italic" style={{ color: 'var(--champagne)' }}>proveedores?</span>
           </h2>
           <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', color: 'rgba(250,248,245,0.5)', lineHeight: 1.75, marginBottom: '2.5rem', fontWeight: 300 }}>
-            Escríbenos directamente por WhatsApp. Respondemos en menos de 2 horas durante horario laboral.
+            Documentación técnica lista para adjuntar. Respondemos en menos de 4 horas hábiles.
           </p>
 
-          <a
-            href="https://wa.me/50362200921"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-magnetic btn-primary"
-            style={{ fontSize: '1rem', padding: '1rem 2.5rem' }}
-          >
-            <span className="btn-slide" />
-            <span className="btn-text" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <MessageCircle size={18} /> Escribir por WhatsApp
-            </span>
-          </a>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+            <a
+              href="mailto:solutions@sidereai.com"
+              className="btn-magnetic btn-primary"
+              style={{ fontSize: '1rem', padding: '1rem 2.5rem' }}
+            >
+              <span className="btn-slide" />
+              <span className="btn-text" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Mail size={17} /> Solicitar Propuesta Técnica
+              </span>
+            </a>
+            <a
+              href="https://wa.me/50362200921"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-magnetic btn-ghost"
+              style={{ fontSize: '0.9rem' }}
+            >
+              <ArrowRight size={14} style={{ color: 'var(--champagne)' }} />
+              <span>Contacto Directo</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -72,8 +82,8 @@ export default function Footer() {
             <div style={{ fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.04em', color: 'var(--ivory)', marginBottom: '0.5rem' }}>
               Sidere<span style={{ color: 'var(--champagne)' }}>AI</span>
             </div>
-            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.82rem', color: 'rgba(250,248,245,0.4)', lineHeight: 1.7, fontWeight: 300 }}>
-              Ingeniería Neural Aplicada.<br />Construimos la inteligencia que mueve tu empresa.
+            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.82rem', color: 'rgba(250,248,245,0.4)', lineHeight: 1.75, fontWeight: 300 }}>
+              Firma de Ingeniería de Software y Consultoría Cloud con sede en El Salvador. Arquitectura Cloud-Native, metodologías ágiles certificadas y compromisos SLA documentados.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.25rem' }}>
               <a href="https://linkedin.com/company/sidereai" target="_blank" rel="noopener noreferrer"
@@ -92,9 +102,11 @@ export default function Footer() {
               NAVEGACIÓN
             </div>
             {[
-              { label: 'Servicios', href: '#servicios' },
+              { label: 'Mercados', href: '#mercados' },
               { label: 'Portafolio', href: '#portafolio' },
-              { label: 'Metodología', href: '#metodologia' },
+              { label: 'Protocolo', href: '#metodologia' },
+              { label: 'RSE y Mentoría', href: '#rse' },
+              { label: 'Comunidad', href: '#comunidad' },
               { label: 'Insights', href: '#insights' },
             ].map(link => (
               <div key={link.href} style={{ marginBottom: '0.5rem' }}>
@@ -111,7 +123,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(250,248,245,0.35)', marginBottom: '1rem' }}>
-              CONTACTO DIRECTO
+              CONTACTO INSTITUCIONAL
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               <a href="mailto:solutions@sidereai.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(250,248,245,0.5)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.25s' }}
@@ -138,7 +150,7 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(250,248,245,0.35)', marginBottom: '1rem' }}>
-              LEGAL
+              LEGAL Y POLÍTICAS
             </div>
             {[
               { label: 'Ética Neural y Gobernanza', href: 'legal/neural-ethics.html' },
@@ -167,13 +179,13 @@ export default function Footer() {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.65rem', letterSpacing: '0.1em', color: 'rgba(250,248,245,0.25)' }}>
-            © {year} Sidere AI. Todos los derechos reservados.
+          <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.1em', color: 'rgba(250,248,245,0.25)' }}>
+            © {year} Sidere AI, S.A. de C.V. · Firma de Ingeniería de Software · El Salvador, C.A. · Soluciones Enterprise para el Sector Público y Privado.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <div className="status-dot" />
             <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.12em', color: 'rgba(34,197,94,0.7)' }}>
-              TODOS LOS SISTEMAS OPERATIVOS
+              TODOS LOS SISTEMAS OPERATIVOS — SLA ACTIVO
             </span>
           </div>
         </div>

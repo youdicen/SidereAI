@@ -44,7 +44,7 @@ const projects = [
     title: 'Portal Guanaco',
     subtitle: 'Plataforma de reputación',
     description: 'Sistema digital para que ciudadanos reporten estafas y malos clientes. Interfaz intuitiva con seguimiento en tiempo real y base de datos centralizada.',
-    url: 'https://youdicen.github.io/PortalGuanaco/',
+    url: 'https://portalguanaco.com/',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80',
     icon: Globe,
     tags: ['Cívico', 'React', 'Supabase'],

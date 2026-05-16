@@ -1,64 +1,37 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Shield, Zap, Lock, Target, Smartphone, Layout } from 'lucide-react'
+import { Cloud, ShieldCheck, Code2 } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const features = [
+const pillars = [
   {
-    icon: Zap,
-    tag: 'Velocidad',
-    title: 'Escala sin sobre-invertir',
-    italic: 'capital eficiente',
-    description: 'Construimos pipelines de IA que crecen con tu negocio, sin necesidad de contratar equipos enteros. Un sistema bien diseñado multiplica la capacidad de tu equipo actual.',
-    metric: '3x',
-    metricLabel: 'Capacidad de equipo',
+    icon: Cloud,
+    tag: 'Cloud · Infraestructura',
+    title: 'Microservicios de Alta Disponibilidad',
+    italic: 'AWS Multi-AZ, sin punto único de falla',
+    description: 'Arquitecturas Cloud-Native con microservicios contenedorizados en Docker, desplegados sobre AWS con CI/CD automático. Aislamiento funcional por módulo y continuidad operativa ante eventos no planificados.',
+    metric: 'AWS · Multi-AZ',
+    metricLabel: 'Sin punto único de falla',
   },
   {
-    icon: Shield,
-    tag: 'Eficiencia',
-    title: 'Elimina los cuellos de botella',
-    italic: 'flujo sin fricción',
-    description: 'Identificamos y automatizamos los procesos manuales repetitivos que consumen el tiempo de tu equipo. Cada workflow optimizado libera horas para trabajo de alto valor.',
-    metric: '80%',
-    metricLabel: 'Tareas automatizadas',
+    icon: ShieldCheck,
+    tag: 'Seguridad · RBAC',
+    title: 'Seguridad por Roles y Cifrado E2E',
+    italic: 'datos protegidos por diseño',
+    description: 'PostgreSQL en 3FN/BCNF con control de acceso RBAC a nivel de esquema. Comunicación sobre TLS/SSL con cifrado en reposo. Política de mínimo privilegio revisada en cada sprint.',
+    metric: 'RBAC + TLS',
+    metricLabel: 'Mínimo privilegio por diseño',
   },
   {
-    icon: Lock,
-    tag: 'Precisión',
-    title: 'Duplica tu eficiencia operativa',
-    italic: 'resultados medibles',
-    description: 'Nuestros modelos propietarios producen resultados deterministas, no alucinaciones. Data soberana: tu información nunca entrena modelos públicos de terceros.',
-    metric: '2x',
-    metricLabel: 'Eficiencia operativa',
-  },
-  {
-    icon: Target,
-    tag: 'Estrategia',
-    title: 'Desarrollo Estratégico Ágil',
-    italic: 'lógica antes que código',
-    description: 'Generamos herramientas personalizadas en tiempo récord porque primero comprendemos a fondo la lógica operativa de tu negocio. Diseñamos la solución exacta antes de escribir la primera línea de código.',
-    metric: '100%',
-    metricLabel: 'Personalización',
-  },
-  {
-    icon: Smartphone,
-    tag: 'Accesibilidad',
-    title: 'Enfoque Mobile-First',
-    italic: 'experiencia óptima',
-    description: 'Todas nuestras plataformas se desarrollan pensando nativamente en un entorno móvil. Aseguramos una interacción inmediata, fluida y sin fricciones desde la palma de tu mano, en cualquier dispositivo.',
-    metric: 'UI/UX',
-    metricLabel: 'Nativo sin compromisos',
-  },
-  {
-    icon: Layout,
-    tag: 'Estética',
-    title: 'Diseño Moderno e Intuitivo',
-    italic: 'alta fidelidad',
-    description: 'Construimos interfaces impecables de alta fidelidad que operan como verdaderos instrumentos digitales. Combinamos la estética premium con una usabilidad instintiva para elevar la percepción de tu marca.',
-    metric: '1:1',
-    metricLabel: 'Pixel perfect',
+    icon: Code2,
+    tag: 'QA · GitFlow',
+    title: 'Código Verificable bajo Principios SOLID',
+    italic: 'calidad visible en cada línea',
+    description: 'Código SOLID gestionado con GitFlow. Pull Requests diarios con revisor asignado. Unit Tests e Integration Tests con reportes exportables. APIs documentadas en Postman para revisión técnica externa.',
+    metric: 'SOLID + GitFlow',
+    metricLabel: 'Tests unitarios e integración continua',
   },
 ]
 
@@ -68,13 +41,13 @@ export default function Features() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.features-title', {
+      gsap.from('.pilares-title', {
         opacity: 0, y: 50, duration: 1, ease: 'power3.out',
         scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
       })
       cardsRef.current.forEach((card, i) => {
         gsap.from(card, {
-          opacity: 0, y: 60, duration: 0.9, delay: i * 0.15, ease: 'power3.out',
+          opacity: 0, y: 60, duration: 0.9, delay: i * 0.18, ease: 'power3.out',
           scrollTrigger: { trigger: card, start: 'top 85%' },
         })
       })
@@ -83,71 +56,76 @@ export default function Features() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="servicios" className="section-padding" style={{ background: 'var(--obsidian)' }}>
+    <section ref={sectionRef} id="pilares" className="section-padding" style={{ background: 'var(--obsidian)' }}>
       <div className="container-wide">
+
         {/* Header */}
-        <div className="features-title" style={{ marginBottom: '4rem', maxWidth: '640px' }}>
+        <div className="pilares-title" style={{ marginBottom: '4rem', maxWidth: '680px' }}>
           <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.18em', color: 'var(--champagne)', marginBottom: '0.75rem' }}>
-            — PROPOSICIÓN DE VALOR
+            — ARQUITECTURA TÉCNICA
           </div>
           <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.04em', color: 'var(--ivory)', lineHeight: 1.1 }}>
-            Por qué elegir{' '}
-            <span className="serif-italic" style={{ color: 'var(--champagne)' }}>Sidere AI</span>
+            Estándares que soportan{' '}
+            <span className="serif-italic" style={{ color: 'var(--champagne)' }}>revisión técnica real.</span>
           </h2>
+          <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.95rem', color: 'rgba(250,248,245,0.5)', marginTop: '1rem', lineHeight: 1.8, fontWeight: 300 }}>
+            Cada decisión de arquitectura está respaldada por principios documentados y trazables.
+          </p>
         </div>
 
-        {/* Cards Grid */}
+        {/* Cards Grid — 3 columnas */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-          {features.map((feat, i) => {
-            const Icon = feat.icon
+          {pillars.map((pillar, i) => {
+            const Icon = pillar.icon
             return (
               <div
-                key={feat.title}
+                key={pillar.title}
                 ref={el => cardsRef.current[i] = el}
                 className="glass-card"
-                style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.25rem', transition: 'border-color 0.3s' }}
+                style={{ padding: '2.25rem', display: 'flex', flexDirection: 'column', gap: '1.25rem', transition: 'border-color 0.3s' }}
                 onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
                 onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'}
               >
                 {/* Icon + Tag */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <div style={{
-                    width: 42, height: 42, borderRadius: '12px',
-                    background: 'rgba(201,168,76,0.1)',
+                    width: 46, height: 46, borderRadius: '14px',
+                    background: 'rgba(201,168,76,0.08)',
+                    border: '1px solid rgba(201,168,76,0.15)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
-                    <Icon size={20} style={{ color: 'var(--champagne)' }} />
+                    <Icon size={22} style={{ color: 'var(--champagne)' }} />
                   </div>
                   <span className="tag-pill" style={{ background: 'rgba(201,168,76,0.08)', color: 'var(--champagne)', border: '1px solid rgba(201,168,76,0.2)' }}>
-                    {feat.tag}
+                    {pillar.tag}
                   </span>
                 </div>
 
                 {/* Title */}
                 <div>
-                  <h3 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '1.2rem', letterSpacing: '-0.03em', color: 'var(--ivory)' }}>
-                    {feat.title}
+                  <h3 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '1.15rem', letterSpacing: '-0.03em', color: 'var(--ivory)', lineHeight: 1.3 }}>
+                    {pillar.title}
                   </h3>
-                  <div className="serif-italic" style={{ color: 'var(--champagne)', fontSize: '0.9rem', marginTop: '0.1rem' }}>
-                    {feat.italic}
+                  <div className="serif-italic" style={{ color: 'var(--champagne)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
+                    {pillar.italic}
                   </div>
                 </div>
 
                 {/* Description */}
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.88rem', lineHeight: 1.75, color: 'rgba(250,248,245,0.55)', fontWeight: 300 }}>
-                  {feat.description}
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.875rem', lineHeight: 1.8, color: 'rgba(250,248,245,0.55)', fontWeight: 300, flexGrow: 1 }}>
+                  {pillar.description}
                 </p>
 
                 {/* Metric */}
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1rem', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1rem', display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
                   <span style={{
-                    fontFamily: 'Inter, sans-serif', fontWeight: 800,
-                    fontSize: '2rem', letterSpacing: '-0.04em',
+                    fontFamily: 'JetBrains Mono, monospace', fontWeight: 700,
+                    fontSize: '1rem', letterSpacing: '0.05em',
                     background: 'linear-gradient(135deg, var(--champagne), var(--ivory))',
                     WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent',
-                  }}>{feat.metric}</span>
-                  <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.65rem', letterSpacing: '0.1em', color: 'rgba(250,248,245,0.4)' }}>
-                    {feat.metricLabel}
+                  }}>{pillar.metric}</span>
+                  <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.1em', color: 'rgba(250,248,245,0.35)' }}>
+                    {pillar.metricLabel}
                   </span>
                 </div>
               </div>
